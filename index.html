@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>牛客网 - 算法四部曲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>算法四部曲</h1>
+        <p>一场从创世星云到银心黑洞的史诗级航行</p>
+
+        <!-- 新增：舰桥仪表盘 -->
+        <div class="dashboard">
+            <div class="stat-card">
+                <div class="stat-number" id="total-chapters">0</div>
+                <div class="stat-label">总章节</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completed-chapters">0</div>
+                <div class="stat-label">已征服</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-problems">0</div>
+                <div class="stat-label">总题目</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="solved-problems">0</div>
+                <div class="stat-label">已解决</div>
+            </div>
+        </div>
+    </header>
+
+    <button id="back-to-galaxy" class="back-button hidden">← 返回星图</button>
+    
+    <main id="galaxy-container">
+        <svg id="orbit-paths" width="100%" height="100%"></svg>
+        <div id="dynamic-content">
+            <!-- 星球和星云将由 JavaScript 动态生成 -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Nowcoder | All Rights Reserved | <a href="https://www.nowcoder.com/exam/oj?channelPut=quartet2025" target="_blank" class="footer-link">牛客网</a> | 用代码探索宇宙</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
