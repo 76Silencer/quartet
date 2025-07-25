@@ -124,6 +124,19 @@ document.addEventListener('DOMContentLoaded', () => {
         
         backButton.classList.remove('hidden');
         backButton.onclick = switchToGalaxyView; // 明确设置返回按钮功能
+
+        // 移除不再需要的JS布局修复
+        /*
+        // 关键修复：强制浏览器重新计算布局，解决容器高度不收缩的问题
+        // 1. 先将容器高度设为0，打破旧的“最大高度”缓存
+        dynamicContent.style.height = '0px';
+        // 2. 通过访问一个布局属性，强制浏览器立即应用上面的样式（同步回流）
+        void dynamicContent.offsetHeight; 
+        // 3. 将高度恢复为auto，让它能根据新内容自然伸缩
+        dynamicContent.style.height = '';
+        */
+
+        // setupDraggableScroll(dynamicContent); // 之前的滚动逻辑，已移除
     }
 
     // --- 新增：渲染太阳系视图的函数 ---
