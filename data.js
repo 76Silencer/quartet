@@ -234,7 +234,7 @@ const galaxyData = {
             image: 'https://uploadfiles.nowcoder.com/images/20250725/0_1753414676141/4A1E30934C2C3E4A8A44E9E74FE87516',
             chapters: [
                 {
-                    id: 'c2-1', name: '暴力枚举', x: '15%', y: '15%', type: 'lava',
+                    id: 'c2-2', name: '暴力枚举', x: '15%', y: '15%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN1', questionTitle: '小红喜欢1', accept: null, questionUuid: 'cbd0c91f821847a4bb1c5115405f6eda', acceptRate: '61.98' },
                         { questionNo: 'BGN2', questionTitle: '田忌赛马', accept: null, questionUuid: '49d799f65a0749588e9cd7e6135a4a9a', acceptRate: '40.90' },
@@ -249,7 +249,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-2', name: '模拟算法', x: '30%', y: '25%', type: 'lava',
+                    id: 'c2-3', name: '模拟算法', x: '30%', y: '25%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN11', questionTitle: '数颜色', accept: null, questionUuid: '7f458453debe49c9a98f20f42d65ebf1', acceptRate: '75.07' },
                         { questionNo: 'BGN12', questionTitle: '特殊的科学计数法', accept: null, questionUuid: 'ca0962879d3b40d8bb598fb9a905ac7a', acceptRate: '22.15' },
@@ -263,7 +263,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-3', name: '排序算法', x: '50%', y: '30%', type: 'lava',
+                    id: 'c2-4', name: '排序算法', x: '50%', y: '30%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN20', questionTitle: '【模板】排序', accept: null, questionUuid: '40bf74658879460bbf5f1bfe772e8580', acceptRate: '49.08' },
                         { questionNo: 'BGN21', questionTitle: '分数线划定', accept: null, questionUuid: '2395fa7b6c6e452e8d8310a7cfdbe902', acceptRate: '48.89' },
@@ -277,7 +277,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-4', name: '贪心算法', x: '70%', y: '35%', type: 'lava',
+                    id: 'c2-5', name: '贪心算法', x: '70%', y: '35%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN29', questionTitle: '小红的优惠券', accept: null, questionUuid: 'e991a011f96444f3a6ad57943d39f4ad', acceptRate: '46.17' },
                         { questionNo: 'BGN30', questionTitle: '讨厌鬼进货', accept: null, questionUuid: 'e364bac751204aa0b2d27389ca8e3c94', acceptRate: '57.93' },
@@ -294,7 +294,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-5', name: '简单数论', x: '85%', y: '50%', type: 'lava',
+                    id: 'c2-6', name: '简单数论', x: '85%', y: '50%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN41', questionTitle: '判断质数', accept: null, questionUuid: '9f418ff48b5e4e879f398352bed6118d', acceptRate: '28.08' },
                         { questionNo: 'BGN42', questionTitle: '分解质因数', accept: true, questionUuid: '35723516d6f841ca8869ecbcf3ddacaf', acceptRate: '45.75' },
@@ -309,7 +309,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-6', name: '前缀和与差分数组', x: '78%', y: '70%', type: 'lava',
+                    id: 'c2-7', name: '前缀和与差分数组', x: '78%', y: '70%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN51', questionTitle: '【模板】静态区间和（前缀和）', accept: true, questionUuid: 'ac79a1a4a66646cc87525d6faa86e021', acceptRate: '44.49' },
                         { questionNo: 'BGN52', questionTitle: '【模板】差分', accept: true, questionUuid: '4bbc401a5df140309edd6f14debdba42', acceptRate: '34.41' },
@@ -326,7 +326,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-7', name: '简单动态规划', x: '60%', y: '78%', type: 'lava',
+                    id: 'c2-8', name: '简单动态规划', x: '60%', y: '78%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN63', questionTitle: '数楼梯', accept: null, questionUuid: 'c7e5f164fa5d471f8f83c90fe4ee3f05', acceptRate: '39.72' },
                         { questionNo: 'BGN64', questionTitle: '硬币凑钱', accept: null, questionUuid: 'a9228c3f450749a5bc8edd2f0e7b90e9', acceptRate: '45.34' },
@@ -339,7 +339,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-8', name: '构造算法', x: '40%', y: '82%', type: 'lava',
+                    id: 'c2-9', name: '构造算法', x: '40%', y: '82%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN71', questionTitle: '构造C的歪', accept: null, questionUuid: '56735b3fe2fc4ed5916f5427dc787156', acceptRate: '74.40' },
                         { questionNo: 'BGN72', questionTitle: '茉茉的密码', accept: true, questionUuid: '016a87b3015c448da67974d1d731d7ef', acceptRate: '37.37' },
@@ -353,7 +353,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-9', name: '位运算', x: '20%', y: '75%', type: 'lava',
+                    id: 'c2-10', name: '位运算', x: '20%', y: '75%', type: 'lava',
                     problems: [
                         { questionNo: 'BGN80', questionTitle: '二进制数1', accept: null, questionUuid: 'bc4c7936f5ed42cbb9131b6f39aa272b', acceptRate: '22.34' },
                         { questionNo: 'BGN81', questionTitle: '二进制不同位数', accept: null, questionUuid: 'daf9032926614dab91ca624a7759a868', acceptRate: '48.56' },
@@ -372,7 +372,7 @@ const galaxyData = {
             image: 'https://uploadfiles.nowcoder.com/images/20250725/0_1753414624945/A2FB028DA5DB82B9840C87926133B273',
             chapters: [
                 {
-                    id: 'c3-1', name: '数论进阶', x: '50%', y: '20%', type: 'ocean',
+                    id: 'c3-2', name: '数论进阶', x: '50%', y: '20%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH1', questionTitle: '小美的外卖订单编号', accept: true, questionUuid: '91506d447f3445c999a27d556e530a37', acceptRate: '24.00' },
                         { questionNo: 'HIGH2', questionTitle: '数字的情绪', accept: true, questionUuid: 'b1b9a88d8e3946e993232e2525f6a11c', acceptRate: '23.31' },
@@ -387,7 +387,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-2', name: '递归算法', x: '70%', y: '30%', type: 'ocean',
+                    id: 'c3-3', name: '递归算法', x: '70%', y: '30%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH11', questionTitle: '大水题', accept: true, questionUuid: '6b9770de551c426287252421742f6ebf', acceptRate: '89.81' },
                         { questionNo: 'HIGH12', questionTitle: '小q的数列', accept: true, questionUuid: '8ea1e0d996f64e15961ae42e658a04a7', acceptRate: '38.93' },
@@ -402,7 +402,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-3', name: '简单组合数学', x: '85%', y: '50%', type: 'ocean',
+                    id: 'c3-4', name: '简单组合数学', x: '85%', y: '50%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH21', questionTitle: '穿搭大挑战', accept: true, questionUuid: 'cd190da0f3614a8393c84981a11d024e', acceptRate: '54.65' },
                         { questionNo: 'HIGH22', questionTitle: '刷题统计', accept: true, questionUuid: '99ddb1a6e71d47dcbbe4f272aba532b8', acceptRate: '92.86' },
@@ -419,7 +419,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-4', name: '深度优先搜索', x: '70%', y: '70%', type: 'ocean',
+                    id: 'c3-5', name: '深度优先搜索', x: '70%', y: '70%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH33', questionTitle: '迷宫寻路', accept: null, questionUuid: '0c8930e517444d04b426e9703d483ed4', acceptRate: '44.34' },
                         { questionNo: 'HIGH34', questionTitle: '数水坑', accept: null, questionUuid: '664ca4289fcf457ba3109fdf4a7a1a05', acceptRate: '64.52' },
@@ -434,7 +434,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-5', name: '广度优先搜索', x: '50%', y: '80%', type: 'ocean',
+                    id: 'c3-6', name: '广度优先搜索', x: '50%', y: '80%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH43', questionTitle: '走迷宫', accept: null, questionUuid: 'e88b41dc6e764b2893bc4221777ffe64', acceptRate: '24.59' },
                         { questionNo: 'HIGH44', questionTitle: '剪纸游戏', accept: true, questionUuid: '33054daa2cc04fd6b97a0d18ccfc66a0', acceptRate: '63.33' },
@@ -450,7 +450,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-6', name: '简单树论与图论', x: '30%', y: '70%', type: 'ocean',
+                    id: 'c3-7', name: '简单树论与图论', x: '30%', y: '70%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH54', questionTitle: '【模板】链式前向星', accept: null, questionUuid: '23f622c8b15f4b37bffe1a986eeea185', acceptRate: '65.52' },
                         { questionNo: 'HIGH55', questionTitle: '求树的根', accept: null, questionUuid: 'e5a97317b37d46dcb10dd5dce66a2ec4', acceptRate: '51.35' },
@@ -467,7 +467,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-7', name: '双指针', x: '15%', y: '50%', type: 'ocean',
+                    id: 'c3-8', name: '双指针', x: '15%', y: '50%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH66', questionTitle: '【模板】滑动窗口', accept: null, questionUuid: 'be419f584a3f4c5b818833f1ce856626', acceptRate: '60.00' },
                         { questionNo: 'HIGH67', questionTitle: '可匹配子段计数', accept: null, questionUuid: 'cfc8ae6269cd445d83686f12da66023c', acceptRate: '46.67' },
@@ -481,7 +481,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-8', name: '分治算法', x: '30%', y: '30%', type: 'ocean',
+                    id: 'c3-9', name: '分治算法', x: '30%', y: '30%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH75', questionTitle: '【模板】整数域二分', accept: null, questionUuid: 'd483ab6bf19245518730a75c6ea108ae', acceptRate: '60.71' },
                         { questionNo: 'HIGH76', questionTitle: '音符', accept: null, questionUuid: 'fbef4a433583436cbf1a7861a5c110d7', acceptRate: '93.33' },
@@ -497,7 +497,7 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-9', name: '动态规划进阶', x: '50%', y: '50%', type: 'ocean',
+                    id: 'c3-10', name: '动态规划进阶', x: '50%', y: '50%', type: 'ocean',
                     problems: [
                         { questionNo: 'HIGH86', questionTitle: '【模板】完全背包', accept: null, questionUuid: 'deda4293d9b24ce1aeaf1813c88b8c25', acceptRate: '24.10' },
                         { questionNo: 'HIGH87', questionTitle: '【模板】多重背包', accept: true, questionUuid: '8fa10063d33a43dd9652c1511a34d461', acceptRate: '41.50' },

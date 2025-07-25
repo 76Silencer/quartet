@@ -1,16 +1,35 @@
 body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #0a0a1a;
-    color: #f0f0f0;
-    text-align: center;
-    overflow: hidden; /* 防止滚动条出现 */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    
+    /* 关键：启用Flexbox布局，并设置默认背景 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://uploadfiles.nowcoder.com/images/20250725/0_1753414581128/AA49C42D7A74CC49DC5D1307F6AF71EE');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 header {
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    text-align: center;
+    flex-shrink: 0; /* 不收缩 */
+}
+
+header.hidden {
+    opacity: 0;
 }
 
 h1 {
@@ -64,14 +83,13 @@ p {
 
 #galaxy-container {
     position: relative;
-    width: 100vw;
-    /* 默认高度为整个视窗减去页脚的高度 */
-    height: calc(100vh - 51px); /* 51px 是页脚的精确高度 */
-    background-image: url('https://uploadfiles.nowcoder.com/images/20250725/0_1753414581128/AA49C42D7A74CC49DC5D1307F6AF71EE');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    transition: all 0.5s ease-in-out; /* 应用于所有属性，过渡更平滑 */
+    overflow: hidden;
+    background: transparent; /* 背景设为透明 */
+    transition: opacity 0.5s ease-in-out;
+    transform: translateY(-7%);
+    flex-grow: 1; /* 关键：占据所有剩余空间 */
+    display: flex; /* 使其内部的 #dynamic-content 可以居中 */
+    flex-direction: column;
 }
 
 /* 当处于星系视图（有Header）时，额外减去Header的高度 */
@@ -91,6 +109,7 @@ p {
 
 /* 新增：动态内容容器样式 */
 #dynamic-content {
+    position: relative; /* 关键修复：为绝对定位的子元素提供定位上下文 */
     display: flex;
     justify-content: center;
     align-items: flex-start; /* 改为顶部对齐 */
@@ -98,8 +117,9 @@ p {
     padding: 5% 20px 20px 20px; /* 增加顶部内边距 */
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
+    height: 100%; /* 恢复为100% */
     z-index: 2; /* 确保行星在星轨之上 */
+    /* transform: translateY(-7%); */ /* 移除此行，已上移至父容器 */
 }
 
 /* 新增：星轨样式 */
@@ -129,12 +149,13 @@ p {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 15px 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    font-size: 0.9em;
+    position: relative;
+    z-index: 10;
+    padding: 5px 0;
+    text-align: center;
+    flex-shrink: 0; /* 不收缩 */
+    background: transparent; /* 背景设为透明 */
+    /* margin-top: -31px; -> 不再需要负边距 */
 }
 
 .footer-link {
@@ -399,7 +420,6 @@ footer {
     width: 80px; /* 增大行星尺寸以容纳更多信息 */
     height: 80px;
     border-radius: 50%;
-    transform: translate(-50%, -50%);
     cursor: default;
     display: flex;
     flex-direction: column; /* 垂直排列 */
@@ -439,11 +459,11 @@ footer {
 
 @keyframes pulse {
     0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.05);
+        transform: scale(1.05);
         box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
     }
 }
@@ -452,18 +472,20 @@ footer {
 .planet.completed {
     background: radial-gradient(circle at 30% 30%, #FFEDB3, #FFD700, #FFA500); /* 更丰富的光辉 */
     border: 2px solid #FFD700;
+    /* 恢复桌面端的动画效果 */
     box-shadow: 0 0 30px #FFD700, 0 0 50px #FFA500;
-    animation: masterGlow 3s ease-in-out infinite; /* 复用 sample3 的大师光效 */
+    animation: masterGlow 3s ease-in-out infinite;
 }
 
+/* 恢复 masterGlow 动画 */
 @keyframes masterGlow {
     0%, 100% { 
         box-shadow: 0 0 30px #FFD700, 0 0 50px #FFA500;
-        transform: translate(-50%, -50%) scale(1);
+        transform: scale(1);
     }
     50% { 
         box-shadow: 0 0 50px #FFD700, 0 0 80px #FFA500, 0 0 100px #FFD700;
-        transform: translate(-50%, -50%) scale(1.1);
+        transform: scale(1.1);
     }
 }
 
@@ -474,7 +496,7 @@ footer {
 }
 
 .planet:hover {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
     z-index: 100; /* 提升层级，确保在最顶层显示 */
 }
 
@@ -562,4 +584,243 @@ footer {
 /* 新增：用于控制显隐的类 */
 .hidden {
     display: none;
+} 
+
+/* --- 全新的移动端响应式设计 --- */
+@media (max-width: 768px) {
+    body, html {
+        overflow-y: auto; /* 允许在移动端垂直滚动 */
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.8em;
+        margin-bottom: 20px;
+    }
+
+    /* 仪表盘2x2布局 */
+    .dashboard {
+        gap: 15px; /* 增加卡片间距 */
+        justify-content: center; /* 居中对齐 */
+    }
+
+    .stat-card {
+        padding: 10px;
+        flex: 0 0 40%; /* 设置为40%宽度，确保一行两个 */
+        max-width: 150px; /* 限制最大宽度，防止在平板上过宽 */
+    }
+
+    .stat-number {
+        font-size: 1.5em;
+    }
+
+    .stat-label {
+        font-size: 0.6em;
+    }
+
+    #galaxy-container.galaxy-view {
+        height: auto;
+        min-height: calc(100vh - 100px);
+        padding-bottom: 20px;
+        transform: none; /* 关键：覆盖桌面端的上移效果 */
+        padding-top: 20px; /* 增加顶部安全边距 */
+    }
+    
+    #dynamic-content {
+        padding: 20px 0; /* 修正：移除左右内边距，让内容占满宽度 */
+    }
+
+    /* --- 主界面 (星系视图) 移动端布局 --- */
+    #galaxy-container.galaxy-view #dynamic-content {
+        display: block; /* 改为块级布局以实现垂直排列 */
+    }
+
+    #galaxy-container.galaxy-view .region {
+        width: 75%; /* 尝试一个更小的宽度，留出更多空间 */
+        max-width: 75%; /* 同样调整 */
+        flex: none; /* 新增：重置flex属性 */
+        height: 180px; /* 增加高度，使其更大 */
+        margin: 0 auto 20px auto; /* 居中并添加底部间距 */
+        display: flex; /* 内部依然使用flex来居中标题 */
+        justify-content: center;
+        align-items: center;
+    }
+
+    #galaxy-container.galaxy-view .region:hover {
+        transform: scale(1.02); /* 减弱悬浮效果 */
+    }
+
+    /* --- 章节界面 (星云视图) 移动端布局 --- */
+    #galaxy-container.nebula-view {
+        position: relative;
+        transform: none; /* 关键：覆盖桌面端的上移效果 */
+        padding-top: 40px; /* 为顶部提供稳定的安全边距 */
+        min-height: calc(100vh - 100px); /* 确保内容区域足够高 */
+        height: auto;
+    }
+
+    #galaxy-container.nebula-view #dynamic-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* 水平居中 */
+        align-items: flex-start; /* 关键：改为flex-start以支持交错布局 */
+        gap: 20px 8vw; /* 垂直间距20px, 水平间距8vw, 强制两列布局 */
+        padding: 0 5% 20px; /* 移除顶部内边距，交由父容器管理 */
+    }
+
+    #galaxy-container.nebula-view .planet {
+        position: static;
+        transform: none;
+        /* 尺寸调整：25vw */
+        width: 25vw;
+        height: 25vw; 
+        max-width: 110px; /* 限制最大尺寸 */
+        max-height: 110px; /* 限制最大尺寸 */
+        padding: 6px; /* 调整内边距 */
+        box-sizing: border-box;
+        
+        flex-direction: column; 
+        justify-content: center;
+        gap: 5px;
+
+        animation: none; 
+        box-shadow: none; 
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        flex-shrink: 0;
+    }
+
+    /* 重新启用交错布局：仅将偶数星球向下推 */
+    #galaxy-container.nebula-view .planet:nth-child(even) {
+        margin-top: 40px;
+    }
+
+    /* 新增：移除移动端星球的装饰性伪元素，解决光晕问题 */
+    #galaxy-container.nebula-view .planet::before,
+    #galaxy-container.nebula-view .planet::after {
+        content: none;
+    }
+
+    /* 移动端，对已完成的行星，只保留金色边框，不加辉光 */
+    #galaxy-container.nebula-view .planet.completed {
+        animation: none;
+        box-shadow: none;
+        border: 2px solid #FFD700;
+    }
+
+    #galaxy-container.nebula-view .planet:hover {
+        transform: scale(1.05);
+    }
+
+    #galaxy-container.nebula-view .planet-number {
+        font-size: 1.1em; /* 再次微调 */
+    }
+
+    #galaxy-container.nebula-view .planet-name {
+        font-size: 0.65em; /* 再次微调 */
+        text-align: center; /* 居中对齐文字 */
+    }
+    
+    /* 在移动端彻底隐藏星轨 */
+    #orbit-paths {
+        display: none;
+    }
+
+    /* 调整返回按钮位置 */
+    .back-button {
+        top: 15px;
+        left: 15px;
+        padding: 8px 15px;
+    }
+
+    /* --- 题目详情 (太阳系视图) 移动端布局 --- */
+    #galaxy-container.solar-system-view {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20px;
+        overflow-y: auto; /* 允许整个视图滚动 */
+        transform: none; /* 关键：覆盖桌面端的上移效果 */
+        padding-top: 40px; /* 与nebula-view统一，为返回按钮提供空间 */
+    }
+
+    /* 新增：定义动态内容区的布局，强制垂直排列 */
+    #galaxy-container.solar-system-view #dynamic-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #galaxy-container.solar-system-view .sun {
+        width: 180px;
+        height: 180px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        animation: none;
+        flex-shrink: 0; /* 防止太阳在 flex 布局中被压缩 */
+    }
+
+    #galaxy-container.solar-system-view .planets-container {
+        /* 核心：应用和星云视图类似的双列网格布局 */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start; /* 支持交错 */
+        width: 100%;
+        gap: 15px 8vw; /* 垂直和水平间距 */
+        padding: 20px 5%;
+        overflow-x: hidden;
+    }
+
+    /* 新增：为题目 wrapper 设置样式，并覆盖JS的marginBottom */
+    #galaxy-container.solar-system-view .problem-planet-wrapper {
+        margin-bottom: 0 !important; 
+        width: 30vw; /* 宽度设为30vw，为文字留出空间 */
+        max-width: 120px; /* 限制最大宽度 */
+    }
+
+    /* 新增：应用交错效果 */
+    #galaxy-container.solar-system-view .problem-planet-wrapper:nth-child(even) {
+        margin-top: 30px; /* 交错的距离 */
+    }
+
+    #galaxy-container.solar-system-view .problem-planet {
+        /* 调整星球大小以适应 wrapper */
+        width: 80px;
+        height: 80px;
+    }
+
+    #galaxy-container.solar-system-view .problem-title {
+        font-size: 0.8em;
+        margin-top: 8px; /* 文字与星球的间距 */
+        line-height: 1.2;
+    }
+
+    #galaxy-container.solar-system-view .problem-accept-rate,
+    #galaxy-container.solar-system-view .problem-status {
+        font-size: 0.75em;
+        margin-top: 4px;
+    }
+    
+} /* @media (max-width: 768px) 结束 */
+
+/* 页脚 - 移至全局，确保桌面和移动端都生效 */
+footer {
+    position: relative;
+    z-index: 10;
+    padding: 5px 0;
+    text-align: center;
+    flex-shrink: 0; /* 不收缩 */
+    background: transparent; /* 背景设为透明 */
+}
+
+footer a {
+    color: #00a8c6;
 } 

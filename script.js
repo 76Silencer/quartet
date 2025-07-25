@@ -10,120 +10,151 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. 定义所有功能函数
 
-    // Wrapper function to clear orbits before switching to galaxy view
+    // 帮助函数：检查章节是否已完成
+    function isChapterCompleted(chapter) {
+        return chapter.problems && chapter.problems.every(p => p.accept);
+    }
+    
+    // -- 切换回主星系视图 --
     function switchToGalaxyView() {
-        orbitPaths.innerHTML = ''; // Clear orbits first
+        const svg = document.getElementById('orbit-paths');
+        svg.innerHTML = ''; // 清空可能存在的星轨
+        galaxyContainer.classList.remove('nebula-view', 'solar-system-view');
+        galaxyContainer.classList.add('galaxy-view');
+        
+        // 恢复body的默认背景图
+        document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('https://uploadfiles.nowcoder.com/images/20250725/0_1753414581128/AA49C42D7A74CC49DC5D1307F6AF71EE')`;
+
+        // 清空可能存在的内联样式
+        dynamicContent.style.flexDirection = '';
+        backButton.classList.add('hidden');
         renderGalaxyView();
     }
 
     function renderGalaxyView() {
-        dynamicContent.innerHTML = ''; // 只清空动态容器
-        galaxyContainer.style.backgroundImage = '';
+        header.classList.remove('hidden'); // 关键：在主视图确保Header可见
+        dynamicContent.innerHTML = '';
         galaxyContainer.className = 'galaxy-view';
-        header.classList.remove('hidden'); // 不再使用opacity，而是移除hidden类
-        backButton.classList.add('hidden');
-
-        // 直接使用全局变量 galaxyData
+        
+        // 修正遍历逻辑：遍历 galaxyData.regions 数组
         galaxyData.regions.forEach(regionData => {
             const regionEl = document.createElement('div');
             regionEl.className = 'region';
             if (regionData.image) {
                 regionEl.style.backgroundImage = `url('${regionData.image}')`;
             }
-            // Object.assign(regionEl.style, { ...regionData.position, transform: regionData.position.transform || 'translateY(-50%)' });
             
             const titleEl = document.createElement('div');
             titleEl.className = 'region-title';
-            // Multi-line title support: replace ' - ' with a line break
-            titleEl.innerHTML = regionData.name.replace(' - ', '<br/>- ');
+            // 安全检查：确保 regionData.name 存在
+            if (regionData.name) {
+                titleEl.innerHTML = regionData.name.replace(' - ', '<br/>- ');
+            }
             regionEl.appendChild(titleEl);
 
-            if (regionData.status === 'locked') {
+            if (regionData.locked || regionData.status === 'locked') { // 兼容两种锁定状态
                 regionEl.classList.add('locked');
                 const lockIcon = document.createElement('div');
                 lockIcon.className = 'lock-icon';
                 lockIcon.textContent = '敬请期待';
                 regionEl.appendChild(lockIcon);
             } else {
-                regionEl.onclick = () => renderNebulaView(regionData);
+                // 修正调用：传递 regionData.id
+                regionEl.onclick = () => renderNebulaView(regionData.id);
             }
-            dynamicContent.appendChild(regionEl); // 在动态容器中添加元素
+            dynamicContent.appendChild(regionEl);
         });
         
-        // 调用新函数更新仪表盘
         updateDashboardStats();
     }
 
-    function renderNebulaView(regionData) {
-        dynamicContent.innerHTML = ''; // 只清空动态容器
-        galaxyContainer.className = 'nebula-view';
-        header.classList.add('hidden'); // 不再使用opacity，而是添加hidden类
-        backButton.classList.remove('hidden');
-        backButton.onclick = switchToGalaxyView; // Back button goes to the wrapper function
+    // 渲染星云视图 (题单内部)
+    function renderNebulaView(regionId) {
+        // 修正：通过 find 从数组中查找 region
+        const regionData = galaxyData.regions.find(r => r.id === regionId);
+        if (!regionData || regionData.locked) return;
 
-        if (regionData.image) {
-            galaxyContainer.style.backgroundImage = `url('${regionData.image}')`;
-        }
+        header.classList.add('hidden'); // 关键：在星云视图隐藏Header
+        // 清空现有内容并设置背景
+        dynamicContent.innerHTML = '';
+        // 设置body的背景图，并保留统一的渐变蒙层
+        document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('${regionData.image}')`;
         
-        // regionData 参数本身就包含了章节信息，直接使用即可
-        regionData.chapters.forEach((chapter, index) => {
+        // 为容器添加视图特定类
+        galaxyContainer.classList.remove('galaxy-view');
+        galaxyContainer.classList.add('nebula-view');
+
+        // 关键修复：从 solar-system-view 返回时，其 flex-direction: column 样式有时会“残留”
+        // 在清空内容前，显式重置布局样式，确保能正确渲染为双列网格。
+        dynamicContent.style.flexDirection = 'row';
+
+        // 动态创建并添加行星 (章节)
+        regionData.chapters.forEach(chapter => {
             const planetEl = document.createElement('div');
             planetEl.className = `planet ${chapter.type}`;
+            if (isChapterCompleted(chapter)) {
+                planetEl.classList.add('completed');
+            }
+
+            // 修正：从ID中提取数字部分作为序号
+            const chapterNumber = chapter.id.split('-').pop(); 
+            planetEl.innerHTML = `
+                <div class="planet-number">${String(chapterNumber).padStart(2, '0')}</div>
+                <div class="planet-name">${chapter.name}</div>
+            `;
+            
+            // 移除屏幕宽度判断，无条件应用坐标，让CSS决定如何显示
             planetEl.style.left = chapter.x;
             planetEl.style.top = chapter.y;
 
-            // --- 新增：检查章节是否已完成 ---
-            const isCompleted = chapter.problems.every(p => p.accept);
-            if (isCompleted) {
-                planetEl.classList.add('completed');
-            }
-            
-            // --- 新增：创建并添加序号 ---
-            const chapterNumberEl = document.createElement('div');
-            chapterNumberEl.className = 'planet-number';
-            // 根据索引计算序号 (e.g., 02, 03, ..., 18)
-            chapterNumberEl.textContent = String(index + 2).padStart(2, '0');
-            planetEl.appendChild(chapterNumberEl);
+            // 附加数据以便后续使用
+            planetEl.dataset.regionId = regionId;
+            planetEl.dataset.chapterId = chapter.id;
 
-            const planetName = document.createElement('div');
-            planetName.className = 'planet-name';
-            planetName.textContent = chapter.name;
-            planetEl.appendChild(planetName);
-
-            const satelliteList = document.createElement('ul');
-            satelliteList.className = 'satellite-list';
-            chapter.problems.forEach(problem => {
-                const satelliteItem = document.createElement('li');
-                satelliteItem.textContent = problem.questionTitle;
-                if (problem.accept) {
-                    satelliteItem.classList.add('solved');
-                }
-                satelliteList.appendChild(satelliteItem);
+            // 点击行星进入太阳系视图
+            planetEl.addEventListener('click', () => {
+                renderSolarSystemView(regionId, chapter.id);
             });
-            planetEl.appendChild(satelliteList);
 
-            // --- 行为变更：从悬浮显示列表改为点击进入太阳系 ---
-            planetEl.onclick = () => renderSolarSystemView(chapter, regionData);
-
-            dynamicContent.appendChild(planetEl); // 在动态容器中添加元素
+            dynamicContent.appendChild(planetEl);
         });
 
-        // 调用新函数绘制星轨
+        // 移除屏幕宽度判断，无条件绘制轨道，让CSS决定是否显示
         drawOrbitPaths(regionData.chapters);
+        
+        backButton.classList.remove('hidden');
+        backButton.onclick = switchToGalaxyView; // 明确设置返回按钮功能
     }
 
     // --- 新增：渲染太阳系视图的函数 ---
-    function renderSolarSystemView(chapter, regionData) {
+    function renderSolarSystemView(regionId, chapterId) {
+        // 修正：通过 find 从数组中查找 region
+        const regionData = galaxyData.regions.find(r => r.id === regionId);
+        if (!regionData) return; // 安全检查
+
+        const chapter = regionData.chapters.find(c => c.id === chapterId);
+        if (!chapter) return; // 安全检查
+        
+        header.classList.add('hidden'); // 关键：在太阳系视图隐藏Header
+
         dynamicContent.innerHTML = '';
         const svg = document.getElementById('orbit-paths');
         svg.innerHTML = ''; // Clear orbits
-        galaxyContainer.className = 'solar-system-view';
-        backButton.onclick = () => renderNebulaView(regionData); // Back button now returns to Nebula View
+        galaxyContainer.className = 'solar-system-view back-button-visible';
+        backButton.onclick = () => renderNebulaView(regionId); // Back button now returns to Nebula View
+
+        // 关键修复：清除可能由 nebula-view 残留的 flex-direction: 'row' 内联样式
+        dynamicContent.style.flexDirection = '';
+
+        // 设置body的背景图，并保留统一的渐变蒙层
+        document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('${regionData.image}')`;
 
         // 创建太阳 (恒星)
         const sunEl = document.createElement('div');
         sunEl.className = 'sun';
-        const chapterNumberHTML = `<div class="sun-chapter-number">${String(regionData.chapters.indexOf(chapter) + 2).padStart(2, '0')}</div>`;
+        // 修正：使用 chapter.id 来确保序号正确
+        const sunChapterNumber = chapter.id.split('-').pop();
+        const chapterNumberHTML = `<div class="sun-chapter-number">${String(sunChapterNumber).padStart(2, '0')}</div>`;
         const chapterNameHTML = `<div class="sun-name">${chapter.name}</div>`;
         sunEl.innerHTML = chapterNumberHTML + chapterNameHTML;
         dynamicContent.appendChild(sunEl);
@@ -192,12 +223,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function drawOrbitPaths(chapters) {
         const svg = document.getElementById('orbit-paths');
         svg.innerHTML = ''; // 清空旧路径
-        if (chapters.length < 2) return;
+        if (!chapters || chapters.length < 2) return;
 
-        // 将百分比坐标转换为像素坐标
+        // 星球的半径 (width / 2)，用于计算中心点
+        const planetRadius = 40; // 80px / 2
+
+        // 将百分比坐标转换为像素坐标，并偏移到中心点
         const points = chapters.map(chapter => {
-            const x = parseFloat(chapter.x) / 100 * svg.clientWidth;
-            const y = parseFloat(chapter.y) / 100 * svg.clientHeight;
+            const x = (parseFloat(chapter.x) / 100 * svg.clientWidth) + planetRadius;
+            const y = (parseFloat(chapter.y) / 100 * svg.clientHeight) + planetRadius;
             return { x, y };
         });
 
@@ -209,9 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
             path.setAttribute('class', 'orbit-line');
 
             // --- 新增：判断路径是否已解锁 ---
-            // 如果路径的起点行星已完成，则认为该路径已解锁
             const fromChapter = chapters[i];
-            if (fromChapter.problems.every(p => p.accept)) {
+            if (isChapterCompleted(fromChapter)) { // 使用辅助函数
                 path.classList.add('unlocked');
             }
 
@@ -226,16 +259,18 @@ document.addEventListener('DOMContentLoaded', () => {
         let totalProblems = 0;
         let solvedProblems = 0;
 
+        // 修正遍历逻辑
         galaxyData.regions.forEach(region => {
             if (region.chapters) {
                 totalChapters += region.chapters.length;
                 region.chapters.forEach(chapter => {
-                    const allProblemsInChapterSolved = chapter.problems.every(p => p.accept);
-                    if (allProblemsInChapterSolved) {
+                    if (isChapterCompleted(chapter)) { // 使用辅助函数
                         completedChapters++;
                     }
-                    totalProblems += chapter.problems.length;
-                    solvedProblems += chapter.problems.filter(p => p.accept).length;
+                    if (chapter.problems) { // 安全检查
+                        totalProblems += chapter.problems.length;
+                        solvedProblems += chapter.problems.filter(p => p.accept).length;
+                    }
                 });
             }
         });
@@ -247,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 3. 绑定事件
-    backButton.onclick = switchToGalaxyView;
+    // backButton.addEventListener('click', switchToGalaxyView); // 移除全局监听，改为在各视图中动态设置
     
     // 4. 最后，运行程序
     renderGalaxyView();
