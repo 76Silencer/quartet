@@ -8,14 +8,14 @@ const galaxyData = {
             chapters: [
                  // --- Outer Ellipse Path ---
                  {
-                    id: 'c1-2', name: '代码的运行', x: '10%', y: '45%', type: 'terran',
-                    problems: [
+                    index: '2', name: '代码的运行', x: '10%', y: '45%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob1', questionTitle: 'Hello Nowcoder', accept: true, questionUuid: '6dd1bc8539db4b7199f4972a5dc14bd2', acceptRate: '33.50' },
                     ]
                 },
                 {
-                    id: 'c1-3', name: '基本数据类型', x: '20%', y: '28%', type: 'terran',
-                    problems: [
+                    index: '3', name: '基本数据类型', x: '20%', y: '28%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob2', questionTitle: '牛牛学说话之-整数', accept: true, questionUuid: 'df9ee533ef9544bfa382203c812d9b55', acceptRate: '47.20' },
                         { questionNo: 'noob3', questionTitle: '牛牛学说话之-浮点数', accept: true, questionUuid: '7c3bf58fac1a4eb69fa32c2d2c379bac', acceptRate: '39.78' },
                         { questionNo: 'noob4', questionTitle: '牛牛学说话之-字符串', accept: true, questionUuid: 'fa8bde2f612749c9813262a146488c9d', acceptRate: '59.47' },
@@ -23,8 +23,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-4', name: '运算符与优先级', x: '35%', y: '20%', type: 'terran',
-                    problems: [
+                    index: '4', name: '运算符与优先级', x: '35%', y: '20%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob6', questionTitle: '牛牛学加法', accept: true, questionUuid: '07fde707001048db8342a4be16c7d4b0', acceptRate: '63.28' },
                         { questionNo: 'noob7', questionTitle: '疫情死亡率', accept: true, questionUuid: '30ccb6041bce43c6989b910dc46d391c', acceptRate: '42.46' },
                         { questionNo: 'noob8', questionTitle: '计算带余除法', accept: true, questionUuid: '34d3911bf2fd48a285f6396e886a1259', acceptRate: '50.97' },
@@ -34,8 +34,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-5', name: '顺序结构', x: '50%', y: '22%', type: 'terran',
-                    problems: [
+                    index: '5', name: '顺序结构', x: '50%', y: '22%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob12', questionTitle: '反向输出一个四位数', accept: true, questionUuid: '1f7c1d67446e4361bf4af67c08e0b8b0', acceptRate: '41.90' },
                         { questionNo: 'noob13', questionTitle: '温标转换', accept: true, questionUuid: '41ceb724a9e843ecad8192cfbea56466', acceptRate: '72.57' },
                         { questionNo: 'noob14', questionTitle: '绕距', accept: true, questionUuid: '7a245fc6284f4139b4fb21de58e68483', acceptRate: '47.43' },
@@ -48,8 +48,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-6', name: '选择结构', x: '65%', y: '28%', type: 'terran',
-                    problems: [
+                    index: '6', name: '选择结构', x: '65%', y: '28%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob21', questionTitle: '明天星期几？', accept: true, questionUuid: '9db9e3d19cde405ba94db09ed1c5f3f3', acceptRate: '51.71' },
                         { questionNo: 'noob22', questionTitle: '判断闰年', accept: true, questionUuid: 'a7bcbe3cb86f435d9617dfdd20a16714', acceptRate: '40.73' },
                         { questionNo: 'noob23', questionTitle: '比大小', accept: true, questionUuid: 'b6c48ca948a74afaaf1bc5b5371ba3a3', acceptRate: '62.73' },
@@ -61,8 +61,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-7', name: '循环结构', x: '80%', y: '38%', type: 'terran',
-                    problems: [
+                    index: '7', name: '循环结构', x: '80%', y: '38%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob29', questionTitle: '多组输入a+b II', accept: true, questionUuid: '37cad29015e3457ba256e3319436d0e6', acceptRate: '64.24' },
                         { questionNo: 'noob30', questionTitle: '多组数据a+b III', accept: true, questionUuid: '7e094c0a3a9945b3bee8e1f3c9ea246a', acceptRate: '68.70' },
                         { questionNo: 'noob31', questionTitle: '素数判断', accept: true, questionUuid: '5ab1b9690af047699e96c87dee65def4', acceptRate: '31.97' },
@@ -78,8 +78,8 @@ const galaxyData = {
 
                 // --- Bottom Arm (R to L) ---
                 {
-                    id: 'c1-8', name: '数组', x: '90%', y: '55%', type: 'terran',
-                    problems: [
+                    index: '8', name: '数组', x: '90%', y: '55%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob39', questionTitle: '牛牛学数列6', accept: true, questionUuid: 'b6321648517247b2ac2e2f80cbc63ae1', acceptRate: '64.06' },
                         { questionNo: 'noob40', questionTitle: '二维斐波那契数列', accept: true, questionUuid: 'a1951ca9431646ff8f9bc6f6d24d1e0a', acceptRate: '24.82' },
                         { questionNo: 'noob41', questionTitle: '神秘石像的镜像序列', accept: true, questionUuid: 'fa34eea974234610b6d3d81790cb2949', acceptRate: '52.07' },
@@ -97,8 +97,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-9', name: '字符串', x: '85%', y: '72%', type: 'terran',
-                    problems: [
+                    index: '9', name: '字符串', x: '85%', y: '72%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob53', questionTitle: '年轻人不讲5的', accept: true, questionUuid: '504e04804610463facbedaad9a8c742e', acceptRate: '44.11' },
                         { questionNo: 'noob54', questionTitle: '斗兽棋', accept: true, questionUuid: '0b5afb815f6848d9a7f9c1b0ce514b95', acceptRate: '52.34' },
                         { questionNo: 'noob55', questionTitle: '添加逗号', accept: true, questionUuid: 'f51c317e745649c0900996fd3f683aed', acceptRate: '29.36' },
@@ -111,8 +111,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-10', name: '函数与函数式交互题', x: '70%', y: '80%', type: 'terran',
-                    problems: [
+                    index: '10', name: '函数与函数式交互题', x: '70%', y: '80%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob62', questionTitle: 'a 加 b 问题（函数）', accept: true, questionUuid: '583c33b4f5f24763a9b67cccd6e386a7', acceptRate: '69.27' },
                         { questionNo: 'noob63', questionTitle: 'a 乘 b 问题（函数）', accept: true, questionUuid: 'ab665f78dc15448895573d230c519a1e', acceptRate: '47.67' },
                         { questionNo: 'noob64', questionTitle: '平方根', accept: true, questionUuid: 'e821f9ce44fb4f0aafa481ad93efb6c6', acceptRate: '81.45' },
@@ -123,8 +123,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-11', name: '类与结构体', x: '55%', y: '85%', type: 'terran',
-                    problems: [
+                    index: '11', name: '类与结构体', x: '55%', y: '85%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob69', questionTitle: '最厉害的学生', accept: true, questionUuid: 'b6e7a9ca04d8418b805b3b4b7d25b4d4', acceptRate: '61.95' },
                         { questionNo: 'noob70', questionTitle: '两点间距离', accept: true, questionUuid: '94712d6f654143379f8ea5847d9d6225', acceptRate: '73.99' },
                         { questionNo: 'noob71', questionTitle: '学生综合评估系统', accept: true, questionUuid: 'd8d5d6294b8f48b684ea93fbb4935a2b', acceptRate: '58.92' },
@@ -135,8 +135,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-12', name: '序列', x: '40%', y: '82%', type: 'terran',
-                    problems: [
+                    index: '12', name: '序列', x: '40%', y: '82%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob77', questionTitle: '【模板】序列操作', accept: true, questionUuid: '12da4185c0bb45918cfdc3072e544069', acceptRate: '30.10' },
                         { questionNo: 'noob78', questionTitle: '求峰谷点数', accept: true, questionUuid: '4015c0d05e1f42028520494b7ecef2b8', acceptRate: '67.47' },
                         { questionNo: 'noob79', questionTitle: '向量点乘', accept: true, questionUuid: 'f043b2390788458db7762300911e30df', acceptRate: '91.46' },
@@ -147,8 +147,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-13', name: '栈', x: '25%', y: '75%', type: 'terran',
-                    problems: [
+                    index: '13', name: '栈', x: '25%', y: '75%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob84', questionTitle: '【模板】栈的操作', accept: true, questionUuid: 'cdf02ea916454957b575585634e5773a', acceptRate: '42.97' },
                         { questionNo: 'noob85', questionTitle: '括号配对问题', accept: true, questionUuid: '57260c08eaa44feababd05b328b897d7', acceptRate: '25.22' },
                         { questionNo: 'noob86', questionTitle: '好串', accept: true, questionUuid: '9b072237ebdd4dd99562f01cbf594fac', acceptRate: '44.52' },
@@ -162,8 +162,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-14', name: '队列', x: '15%', y: '65%', type: 'terran',
-                    problems: [
+                    index: '14', name: '队列', x: '15%', y: '65%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob94', questionTitle: '【模板】队列操作', accept: true, questionUuid: '1137c8f6ffac4d5d94cc1b0cb08723f9', acceptRate: '50.27' },
                         { questionNo: 'noob95', questionTitle: '无法吃午餐的学生数量', accept: true, questionUuid: '2dac3d7567f741a88ec551caf907934d', acceptRate: '43.92' },
                         { questionNo: 'noob96', questionTitle: '队列消数', accept: true, questionUuid: '48f6e451ff52440798067b77dc5ea95b', acceptRate: '63.52' },
@@ -175,8 +175,8 @@ const galaxyData = {
 
                 // --- Inner Core Data Structures (Reordered to avoid crossing lines) ---
                 {
-                    id: 'c1-15', name: '集合', x: '30%', y: '55%', type: 'terran',
-                    problems: [
+                    index: '15', name: '集合', x: '30%', y: '55%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob100', questionTitle: '【模板】集合操作', accept: true, questionUuid: 'a37b91f84cdf490b8d8b990794211135', acceptRate: '27.26' },
                         { questionNo: 'noob101', questionTitle: '【模板】多重集合操作', accept: true, questionUuid: 'aaf8b53f6ea74ad6beabed77bb275725', acceptRate: '32.67' },
                         { questionNo: 'noob102', questionTitle: '动态整数集最近值提取', accept: true, questionUuid: 'c8615a370bb24ce6b110c3d7151c3dfc', acceptRate: '26.49' },
@@ -187,8 +187,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-16', name: '优先队列', x: '50%', y: '40%', type: 'terran',
-                    problems: [
+                    index: '16', name: '优先队列', x: '50%', y: '40%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob106', questionTitle: '【模板】整数优先队列', accept: true, questionUuid: 'a88e9711f7b04369982bbe8902278ae4', acceptRate: '49.52' },
                         { questionNo: 'noob107', questionTitle: '结构体优先队列', accept: true, questionUuid: 'e3d68ce7184e4658b42740edd4308d51', acceptRate: '55.24' },
                         { questionNo: 'noob108', questionTitle: '字符串优先队列', accept: true, questionUuid: '7f3c2ebfc3be442897393f7da5d021c8', acceptRate: '92.91' },
@@ -197,8 +197,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-17', name: '链表', x: '70%', y: '50%', type: 'terran',
-                    problems: [
+                    index: '17', name: '链表', x: '70%', y: '50%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob111', questionTitle: '两两交换链表中的结点', accept: true, questionUuid: '1aabdaea8c7e4874bb1d3eda2c7f0042', acceptRate: '53.55' },
                         { questionNo: 'noob112', questionTitle: '移除链表元素', accept: true, questionUuid: '428a854dff8b4333b54cfe580323e2df', acceptRate: '53.40' },
                         { questionNo: 'noob113', questionTitle: '反转链表', accept: true, questionUuid: '75e878df47f24fdc9dc3e400ec6058ca', acceptRate: '39.23' },
@@ -211,8 +211,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c1-18', name: '哈希表', x: '50%', y: '65%', type: 'terran',
-                    problems: [
+                    index: '18', name: '哈希表', x: '50%', y: '65%', type: 'terran',
+                    taQuestionList: [
                         { questionNo: 'noob120', questionTitle: '两数之和', accept: true, questionUuid: 'c4a4f030ca374d9bb9df5c0bdf388626', acceptRate: '00.98' },
                         { questionNo: 'noob121', questionTitle: '字符串哈希', accept: true, questionUuid: 'dadbd37fee7c43f0ae407db11b16b4bf', acceptRate: '74.02' },
                         { questionNo: 'noob122', questionTitle: '大整数哈希', accept: true, questionUuid: '29f0cff8a69b4ab6a2f63fb7386defa3', acceptRate: '33.58' },
@@ -234,8 +234,8 @@ const galaxyData = {
             image: 'https://uploadfiles.nowcoder.com/images/20250725/0_1753414676141/4A1E30934C2C3E4A8A44E9E74FE87516',
             chapters: [
                 {
-                    id: 'c2-2', name: '暴力枚举', x: '15%', y: '15%', type: 'lava',
-                    problems: [
+                    index: '2', name: '暴力枚举', x: '15%', y: '15%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN1', questionTitle: '小红喜欢1', accept: null, questionUuid: 'cbd0c91f821847a4bb1c5115405f6eda', acceptRate: '61.98' },
                         { questionNo: 'BGN2', questionTitle: '田忌赛马', accept: null, questionUuid: '49d799f65a0749588e9cd7e6135a4a9a', acceptRate: '40.90' },
                         { questionNo: 'BGN3', questionTitle: '小红的正整数构造', accept: null, questionUuid: '7aa37cbc28034fe5af562ec7e44d1e76', acceptRate: '48.47' },
@@ -249,8 +249,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-3', name: '模拟算法', x: '30%', y: '25%', type: 'lava',
-                    problems: [
+                    index: '3', name: '模拟算法', x: '30%', y: '25%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN11', questionTitle: '数颜色', accept: null, questionUuid: '7f458453debe49c9a98f20f42d65ebf1', acceptRate: '75.07' },
                         { questionNo: 'BGN12', questionTitle: '特殊的科学计数法', accept: null, questionUuid: 'ca0962879d3b40d8bb598fb9a905ac7a', acceptRate: '22.15' },
                         { questionNo: 'BGN13', questionTitle: '小红的夹吃棋', accept: null, questionUuid: '94648fd37a644c76adb2adb29c2a3037', acceptRate: '48.46' },
@@ -263,8 +263,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-4', name: '排序算法', x: '50%', y: '30%', type: 'lava',
-                    problems: [
+                    index: '4', name: '排序算法', x: '50%', y: '30%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN20', questionTitle: '【模板】排序', accept: null, questionUuid: '40bf74658879460bbf5f1bfe772e8580', acceptRate: '49.08' },
                         { questionNo: 'BGN21', questionTitle: '分数线划定', accept: null, questionUuid: '2395fa7b6c6e452e8d8310a7cfdbe902', acceptRate: '48.89' },
                         { questionNo: 'BGN22', questionTitle: '小苯送礼物', accept: null, questionUuid: '466e02d2177845589ab5fa5decc2857f', acceptRate: '31.62' },
@@ -277,8 +277,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-5', name: '贪心算法', x: '70%', y: '35%', type: 'lava',
-                    problems: [
+                    index: '5', name: '贪心算法', x: '70%', y: '35%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN29', questionTitle: '小红的优惠券', accept: null, questionUuid: 'e991a011f96444f3a6ad57943d39f4ad', acceptRate: '46.17' },
                         { questionNo: 'BGN30', questionTitle: '讨厌鬼进货', accept: null, questionUuid: 'e364bac751204aa0b2d27389ca8e3c94', acceptRate: '57.93' },
                         { questionNo: 'BGN31', questionTitle: '清楚姐姐买竹鼠', accept: null, questionUuid: '816dfe69f83042108cf8c74531a94a35', acceptRate: '29.86' },
@@ -294,8 +294,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-6', name: '简单数论', x: '85%', y: '50%', type: 'lava',
-                    problems: [
+                    index: '6', name: '简单数论', x: '85%', y: '50%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN41', questionTitle: '判断质数', accept: null, questionUuid: '9f418ff48b5e4e879f398352bed6118d', acceptRate: '28.08' },
                         { questionNo: 'BGN42', questionTitle: '分解质因数', accept: true, questionUuid: '35723516d6f841ca8869ecbcf3ddacaf', acceptRate: '45.75' },
                         { questionNo: 'BGN43', questionTitle: '最大公因数与最小公倍数', accept: null, questionUuid: 'ee732bec4f174cd9b4abc6427ba90584', acceptRate: '37.99' },
@@ -309,8 +309,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-7', name: '前缀和与差分数组', x: '78%', y: '70%', type: 'lava',
-                    problems: [
+                    index: '7', name: '前缀和与差分数组', x: '78%', y: '70%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN51', questionTitle: '【模板】静态区间和（前缀和）', accept: true, questionUuid: 'ac79a1a4a66646cc87525d6faa86e021', acceptRate: '44.49' },
                         { questionNo: 'BGN52', questionTitle: '【模板】差分', accept: true, questionUuid: '4bbc401a5df140309edd6f14debdba42', acceptRate: '34.41' },
                         { questionNo: 'BGN53', questionTitle: '舞萌时间到！', accept: null, questionUuid: 'cef5fe464ca54a10ba1b4374f423f09c', acceptRate: '45.05' },
@@ -326,8 +326,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-8', name: '简单动态规划', x: '60%', y: '78%', type: 'lava',
-                    problems: [
+                    index: '8', name: '简单动态规划', x: '60%', y: '78%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN63', questionTitle: '数楼梯', accept: null, questionUuid: 'c7e5f164fa5d471f8f83c90fe4ee3f05', acceptRate: '39.72' },
                         { questionNo: 'BGN64', questionTitle: '硬币凑钱', accept: null, questionUuid: 'a9228c3f450749a5bc8edd2f0e7b90e9', acceptRate: '45.34' },
                         { questionNo: 'BGN65', questionTitle: '小红的地砖', accept: null, questionUuid: '8cd083c66a5f43489a532164e2a2304d', acceptRate: '59.70' },
@@ -339,8 +339,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-9', name: '构造算法', x: '40%', y: '82%', type: 'lava',
-                    problems: [
+                    index: '9', name: '构造算法', x: '40%', y: '82%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN71', questionTitle: '构造C的歪', accept: null, questionUuid: '56735b3fe2fc4ed5916f5427dc787156', acceptRate: '74.40' },
                         { questionNo: 'BGN72', questionTitle: '茉茉的密码', accept: true, questionUuid: '016a87b3015c448da67974d1d731d7ef', acceptRate: '37.37' },
                         { questionNo: 'BGN73', questionTitle: '构造数对', accept: null, questionUuid: 'c16b86c1149a43eaaa0fd85aaee51290', acceptRate: '48.98' },
@@ -353,8 +353,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c2-10', name: '位运算', x: '20%', y: '75%', type: 'lava',
-                    problems: [
+                    index: '10', name: '位运算', x: '20%', y: '75%', type: 'lava',
+                    taQuestionList: [
                         { questionNo: 'BGN80', questionTitle: '二进制数1', accept: null, questionUuid: 'bc4c7936f5ed42cbb9131b6f39aa272b', acceptRate: '22.34' },
                         { questionNo: 'BGN81', questionTitle: '二进制不同位数', accept: null, questionUuid: 'daf9032926614dab91ca624a7759a868', acceptRate: '48.56' },
                         { questionNo: 'BGN82', questionTitle: '被打乱的异或和', accept: null, questionUuid: '116db6858c424fb89b821125053bbc15', acceptRate: '63.18' },
@@ -372,8 +372,8 @@ const galaxyData = {
             image: 'https://uploadfiles.nowcoder.com/images/20250725/0_1753414624945/A2FB028DA5DB82B9840C87926133B273',
             chapters: [
                 {
-                    id: 'c3-2', name: '数论进阶', x: '50%', y: '20%', type: 'ocean',
-                    problems: [
+                    index: '2', name: '数论进阶', x: '50%', y: '20%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH1', questionTitle: '小美的外卖订单编号', accept: true, questionUuid: '91506d447f3445c999a27d556e530a37', acceptRate: '24.00' },
                         { questionNo: 'HIGH2', questionTitle: '数字的情绪', accept: true, questionUuid: 'b1b9a88d8e3946e993232e2525f6a11c', acceptRate: '23.31' },
                         { questionNo: 'HIGH3', questionTitle: '阶乘末尾非零数字', accept: true, questionUuid: '248c8fbee56e491aa147b67b9c082da0', acceptRate: '13.36' },
@@ -387,8 +387,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-3', name: '递归算法', x: '70%', y: '30%', type: 'ocean',
-                    problems: [
+                    index: '3', name: '递归算法', x: '70%', y: '30%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH11', questionTitle: '大水题', accept: true, questionUuid: '6b9770de551c426287252421742f6ebf', acceptRate: '89.81' },
                         { questionNo: 'HIGH12', questionTitle: '小q的数列', accept: true, questionUuid: '8ea1e0d996f64e15961ae42e658a04a7', acceptRate: '38.93' },
                         { questionNo: 'HIGH13', questionTitle: '括号匹配深度', accept: true, questionUuid: 'a2d5b1875bb0408384278f40d1f236c9', acceptRate: '33.14' },
@@ -402,8 +402,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-4', name: '简单组合数学', x: '85%', y: '50%', type: 'ocean',
-                    problems: [
+                    index: '4', name: '简单组合数学', x: '85%', y: '50%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH21', questionTitle: '穿搭大挑战', accept: true, questionUuid: 'cd190da0f3614a8393c84981a11d024e', acceptRate: '54.65' },
                         { questionNo: 'HIGH22', questionTitle: '刷题统计', accept: true, questionUuid: '99ddb1a6e71d47dcbbe4f272aba532b8', acceptRate: '92.86' },
                         { questionNo: 'HIGH23', questionTitle: '墙壁划线', accept: true, questionUuid: 'e197f9012fe74c4a9d003094bb3a2988', acceptRate: '42.17' },
@@ -419,8 +419,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-5', name: '深度优先搜索', x: '70%', y: '70%', type: 'ocean',
-                    problems: [
+                    index: '5', name: '深度优先搜索', x: '70%', y: '70%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH33', questionTitle: '迷宫寻路', accept: null, questionUuid: '0c8930e517444d04b426e9703d483ed4', acceptRate: '44.34' },
                         { questionNo: 'HIGH34', questionTitle: '数水坑', accept: null, questionUuid: '664ca4289fcf457ba3109fdf4a7a1a05', acceptRate: '64.52' },
                         { questionNo: 'HIGH35', questionTitle: '全排列', accept: null, questionUuid: '1d1fe38275da44b5848add89f9e223b1', acceptRate: '60.00' },
@@ -434,8 +434,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-6', name: '广度优先搜索', x: '50%', y: '80%', type: 'ocean',
-                    problems: [
+                    index: '6', name: '广度优先搜索', x: '50%', y: '80%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH43', questionTitle: '走迷宫', accept: null, questionUuid: 'e88b41dc6e764b2893bc4221777ffe64', acceptRate: '24.59' },
                         { questionNo: 'HIGH44', questionTitle: '剪纸游戏', accept: true, questionUuid: '33054daa2cc04fd6b97a0d18ccfc66a0', acceptRate: '63.33' },
                         { questionNo: 'HIGH45', questionTitle: '挡住洪水', accept: null, questionUuid: '56e54f4c2e3c4a58abfe76dbc1da1d7e', acceptRate: '22.81' },
@@ -450,8 +450,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-7', name: '简单树论与图论', x: '30%', y: '70%', type: 'ocean',
-                    problems: [
+                    index: '7', name: '简单树论与图论', x: '30%', y: '70%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH54', questionTitle: '【模板】链式前向星', accept: null, questionUuid: '23f622c8b15f4b37bffe1a986eeea185', acceptRate: '65.52' },
                         { questionNo: 'HIGH55', questionTitle: '求树的根', accept: null, questionUuid: 'e5a97317b37d46dcb10dd5dce66a2ec4', acceptRate: '51.35' },
                         { questionNo: 'HIGH56', questionTitle: '上司的舞会', accept: null, questionUuid: '45c6d97dfd1044769aed5d9d3f139be1', acceptRate: '88.89' },
@@ -467,8 +467,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-8', name: '双指针', x: '15%', y: '50%', type: 'ocean',
-                    problems: [
+                    index: '8', name: '双指针', x: '15%', y: '50%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH66', questionTitle: '【模板】滑动窗口', accept: null, questionUuid: 'be419f584a3f4c5b818833f1ce856626', acceptRate: '60.00' },
                         { questionNo: 'HIGH67', questionTitle: '可匹配子段计数', accept: null, questionUuid: 'cfc8ae6269cd445d83686f12da66023c', acceptRate: '46.67' },
                         { questionNo: 'HIGH68', questionTitle: '【模板】双指针', accept: null, questionUuid: 'a2fd81391e1e4177aa6d506da895381b', acceptRate: '00.10' },
@@ -481,8 +481,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-9', name: '分治算法', x: '30%', y: '30%', type: 'ocean',
-                    problems: [
+                    index: '9', name: '分治算法', x: '30%', y: '30%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH75', questionTitle: '【模板】整数域二分', accept: null, questionUuid: 'd483ab6bf19245518730a75c6ea108ae', acceptRate: '60.71' },
                         { questionNo: 'HIGH76', questionTitle: '音符', accept: null, questionUuid: 'fbef4a433583436cbf1a7861a5c110d7', acceptRate: '93.33' },
                         { questionNo: 'HIGH77', questionTitle: '圆覆盖', accept: true, questionUuid: '4f96afe5dfe74dad88dbe419d33f9536', acceptRate: '31.34' },
@@ -497,8 +497,8 @@ const galaxyData = {
                     ]
                 },
                 {
-                    id: 'c3-10', name: '动态规划进阶', x: '50%', y: '50%', type: 'ocean',
-                    problems: [
+                    index: '10', name: '动态规划进阶', x: '50%', y: '50%', type: 'ocean',
+                    taQuestionList: [
                         { questionNo: 'HIGH86', questionTitle: '【模板】完全背包', accept: null, questionUuid: 'deda4293d9b24ce1aeaf1813c88b8c25', acceptRate: '24.10' },
                         { questionNo: 'HIGH87', questionTitle: '【模板】多重背包', accept: true, questionUuid: '8fa10063d33a43dd9652c1511a34d461', acceptRate: '41.50' },
                         { questionNo: 'HIGH88', questionTitle: '【模板】二维费用背包', accept: true, questionUuid: '84b88177894c4c82980017e6b4a15fb3', acceptRate: '38.89' },
@@ -522,8 +522,192 @@ const galaxyData = {
         },
         {
             id: 'peak',
-            name: '最终章 - 算法之巅',
-            status: 'locked'
+            name: '最终章 - 算法登峰',
+            image: 'https://uploadfiles.nowcoder.com/files/20250911/374967423_1757578360459/20250911160906.png',
+            chapters: [
+                { index: '2', name: '博弈论', x: '50%', y: '15%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK1', questionTitle: '甜蜜的博弈', accept: null, questionUuid: 'd3934f2d05624c8fa1a748ef225d0460', acceptRate: '45.90' },
+                    { questionNo: 'PEEK2', questionTitle: '铁道双子的大追捕', accept: null, questionUuid: 'eb75840a5fa9457bbaed2f715b6630c1', acceptRate: '24.37' },
+                    { questionNo: 'PEEK3', questionTitle: '我测你的马', accept: null, questionUuid: '28695bee97344d59bdc8b5dc703efcfe', acceptRate: '66.67' },
+                    { questionNo: 'PEEK4', questionTitle: '因数游戏', accept: null, questionUuid: 'f51bc958f8a24537bccaf1e893957056', acceptRate: '59.09' },
+                    { questionNo: 'PEEK5', questionTitle: '大撒币', accept: null, questionUuid: 'ff0f60d80ee94d94aba959b2b4c1941a', acceptRate: '64.29' },
+                    { questionNo: 'PEEK6', questionTitle: '删得回文串', accept: null, questionUuid: '5bbf3f6b59be406085c055f6eb316528', acceptRate: '36.99' },
+                    { questionNo: 'PEEK7', questionTitle: '绝对值博弈', accept: null, questionUuid: '218d3386fde4430b8ddfd28dc3a411e7', acceptRate: '70.97' },
+                    { questionNo: 'PEEK8', questionTitle: '推倒那扇门', accept: null, questionUuid: '91f71bf2c68941dc94c8881ec8eeefb4', acceptRate: '80.00' },
+                    { questionNo: 'PEEK9', questionTitle: '浮木博弈', accept: null, questionUuid: '8c70e6107d37468e9f6ad2b25ff167bf', acceptRate: '52.78' },
+                    { questionNo: 'PEEK10', questionTitle: '取石子游戏', accept: null, questionUuid: '04e54aabe60043f7a8392e835e712b10', acceptRate: '100.00' },
+                    { questionNo: 'PEEK11', questionTitle: '【模板】巴什博弈', accept: null, questionUuid: '9bb882504d574ec287f69e967ce0fb95', acceptRate: '73.44' },
+                    { questionNo: 'PEEK12', questionTitle: '最多取半的巴什博弈', accept: null, questionUuid: '3ec37e1b6a604eb7a688a5532208a45f', acceptRate: '50.00' },
+                    { questionNo: 'PEEK13', questionTitle: '【模板】扩展巴什博弈', accept: false, questionUuid: '4b0d36a3d3884cf69f618cf4c2511d82', acceptRate: '48.45' },
+                    { questionNo: 'PEEK14', questionTitle: '不连续的巴什博弈', accept: null, questionUuid: '59d59c1261f64d41ad82e0c383e066ae', acceptRate: '66.67' },
+                    { questionNo: 'PEEK15', questionTitle: '【模板】Nim游戏', accept: null, questionUuid: '8a43384a6a1c42eb9c7cbe47fb600db9', acceptRate: '81.82' },
+                    { questionNo: 'PEEK16', questionTitle: '【模板】Anti-Nim游戏', accept: null, questionUuid: 'e95186f061894e5dbf2c331b3e4e488b', acceptRate: '48.84' }
+                ] },
+                { index: '3', name: '单调栈与单调队列', x: '70%', y: '20%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK17', questionTitle: 'Sliding Window', accept: null, questionUuid: '896fa6501b634231892ebc8a4e042460', acceptRate: '62.50' },
+                    { questionNo: 'PEEK18', questionTitle: 'Look Up', accept: null, questionUuid: '41f9ff63fe614b329d1c1f9f3515ed76', acceptRate: '71.79' },
+                    { questionNo: 'PEEK19', questionTitle: 'Largest Rectangle in a Histogram', accept: null, questionUuid: 'ff0112f21e9646cc90de3d796ca9a7f1', acceptRate: '38.33' },
+                    { questionNo: 'PEEK20', questionTitle: '数列后缀极大位置统计', accept: null, questionUuid: '9b791983564d4ad9a1bf298670562c68', acceptRate: '30.67' },
+                    { questionNo: 'PEEK21', questionTitle: '灌注水箱', accept: null, questionUuid: '6207bb338bb149009720a1b39315d8c4', acceptRate: '44.44' },
+                    { questionNo: 'PEEK22', questionTitle: '最小的最小未出现自然数', accept: null, questionUuid: 'c784b456639e42349604a7926a6ef09e', acceptRate: '26.47' },
+                    { questionNo: 'PEEK23', questionTitle: '区间后缀极大位置计数', accept: null, questionUuid: '90f3f5e037264fae88b02918d07d7235', acceptRate: '34.78' },
+                    { questionNo: 'PEEK24', questionTitle: '能量辐射', accept: null, questionUuid: '04c83aedd3e043879ed4464baae0b564', acceptRate: '73.33' },
+                    { questionNo: 'PEEK25', questionTitle: '浇狡猾花', accept: null, questionUuid: 'f55d5cc1a43e47e2a0f7e9b7adab6ff9', acceptRate: '69.23' }
+                ] },
+                { index: '4', name: '随机化', x: '85%', y: '35%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK26', questionTitle: '数位差与数值和的构造', accept: null, questionUuid: '36f3593e553c4c67987abf88a3d4d105', acceptRate: '40.89' },
+                    { questionNo: 'PEEK27', questionTitle: '不是解的解', accept: null, questionUuid: 'c70d05aba13f48cfaf6e730480f29ff2', acceptRate: '84.21' },
+                    { questionNo: 'PEEK28', questionTitle: '有向二分图构造', accept: null, questionUuid: 'e56757bb703b4cee9d641d1682b54b63', acceptRate: '34.51' },
+                    { questionNo: 'PEEK29', questionTitle: '构造异或三角形', accept: null, questionUuid: '03a15a525c014ceb92a5a294fd002799', acceptRate: '81.25' },
+                    { questionNo: 'PEEK30', questionTitle: '【模板】Pollard-Pho算法', accept: null, questionUuid: '9da360a56fa846708542b0fb3985c647', acceptRate: '36.45' },
+                    { questionNo: 'PEEK31', questionTitle: '小红的数轴移动（二）', accept: null, questionUuid: '01399f6ffe2c44908fc3760b22a7ad9c', acceptRate: '18.42' },
+                    { questionNo: 'PEEK32', questionTitle: '数组取精', accept: null, questionUuid: '6f77d207b40c41d899d23627d6bd122a', acceptRate: '60.49' },
+                    { questionNo: 'PEEK33', questionTitle: '跑刀仔', accept: null, questionUuid: '63426218a5224e62afa4e2f708cdcea2', acceptRate: '58.97' }
+                ] },
+                { index: '5', name: '并查集', x: '88%', y: '50%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK34', questionTitle: '【模板】并查集', accept: null, questionUuid: '513111e4477c4fad8f19f14d4cdf49dc', acceptRate: '55.77' },
+                    { questionNo: 'PEEK35', questionTitle: '【模板】有依赖的背包问题', accept: null, questionUuid: 'f0a110f831de4cc6bebc6243a26166e6', acceptRate: '53.57' },
+                    { questionNo: 'PEEK36', questionTitle: '修复公路', accept: null, questionUuid: '8111efc8c04d472da349b6e5010e1951', acceptRate: '77.11' },
+                    { questionNo: 'PEEK37', questionTitle: '村村通工程', accept: null, questionUuid: 'd7561a459d3544728b9a9116ede7f276', acceptRate: '90.00' },
+                    { questionNo: 'PEEK38', questionTitle: '学习资料', accept: null, questionUuid: 'bc443ebb64aa486a8098756243b6dd3d', acceptRate: '52.50' },
+                    { questionNo: 'PEEK39', questionTitle: '复合共轭图构造', accept: null, questionUuid: 'facfb36596f64aa38d508c054c3db343', acceptRate: '71.43' },
+                    { questionNo: 'PEEK40', questionTitle: '和谐并处的车', accept: null, questionUuid: '1a44f9b7eee348f9ba8233a551e48ca6', acceptRate: '09.43' },
+                    { questionNo: 'PEEK41', questionTitle: '动态最长连续子序列', accept: null, questionUuid: '6b6d70bff0204ab196a7131fdf73d298', acceptRate: '76.47' },
+                    { questionNo: 'PEEK42', questionTitle: '程序自动分析', accept: null, questionUuid: 'dff237e0b646483791f64455aa7b164a', acceptRate: '30.30' },
+                    { questionNo: 'PEEK43', questionTitle: '小欧皇', accept: true, questionUuid: '6afe13c512d44b30b03933471d259ba4', acceptRate: '19.36' }
+                ] },
+                { index: '6', name: '搜索算法进阶', x: '85%', y: '65%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK44', questionTitle: '【模板】记忆化搜索', accept: null, questionUuid: '211c9fa6ea984185a16c6005e9793736', acceptRate: '14.38' },
+                    { questionNo: 'PEEK45', questionTitle: '填字母游戏', accept: null, questionUuid: 'da0d0e69f1ba46dfbf4e04ed3d1f2c30', acceptRate: '75.51' },
+                    { questionNo: 'PEEK46', questionTitle: '弹珠游戏', accept: null, questionUuid: '89341333586d404eb015cc2c9a39959d', acceptRate: '46.15' },
+                    { questionNo: 'PEEK47', questionTitle: '小木棍', accept: null, questionUuid: 'e0f5370bf8bb4d7d9c89c832c30da460', acceptRate: '35.90' },
+                    { questionNo: 'PEEK48', questionTitle: '模意义下最大子序列和（Hard Version）', accept: null, questionUuid: 'c882246a56e4442fa7fb5cadc1463a35', acceptRate: '31.25' },
+                    { questionNo: 'PEEK49', questionTitle: '遥控无人机', accept: null, questionUuid: '58062d5703b0433ea034dc283b3d6ae6', acceptRate: '85.71' },
+                    { questionNo: 'PEEK50', questionTitle: '八数码', accept: null, questionUuid: '88ad36fde1e34af5a6582b690d3e0ba6', acceptRate: '69.23' },
+                    { questionNo: 'PEEK51', questionTitle: '骑士精神', accept: null, questionUuid: '80fe9a87ed034b70b23b029c5bab6d21', acceptRate: '100.00' },
+                    { questionNo: 'PEEK52', questionTitle: '[AHOI2012]铁盘整理', accept: null, questionUuid: 'bd8ae3ba301a4616908582e31aadd604', acceptRate: '57.14' }
+                ] },
+                { index: '7', name: '倍增系列算法', x: '70%', y: '80%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK53', questionTitle: '环形字符串跃迁', accept: null, questionUuid: '84c36745b9984c25839bdc36f7f83339', acceptRate: '27.08' },
+                    { questionNo: 'PEEK54', questionTitle: '环形数组跃迁', accept: null, questionUuid: '8c2768da54664565b03321bbf33ceb47', acceptRate: '00.00' },
+                    { questionNo: 'PEEK55', questionTitle: '星球传送', accept: null, questionUuid: '0e072de0682245ac804e9f710ed6398e', acceptRate: '80.00' },
+                    { questionNo: 'PEEK56', questionTitle: '数列 k 重排', accept: null, questionUuid: 'e7a39289f41f446e9ec0eaf1198f484d', acceptRate: '38.46' },
+                    { questionNo: 'PEEK57', questionTitle: '小跳蛙', accept: null, questionUuid: '46d943dedaee4e9ea7b48d65681296ad', acceptRate: '00.00' },
+                    { questionNo: 'PEEK58', questionTitle: '【模板】最近公共祖先（LCA）', accept: null, questionUuid: '8004903f8eff4473b5c590b85afd7217', acceptRate: '39.29' },
+                    { questionNo: 'PEEK59', questionTitle: '机房传信', accept: null, questionUuid: 'f4ffcc189f6a4626885ced9ca838d88f', acceptRate: '100.00' },
+                    { questionNo: 'PEEK60', questionTitle: '仓鼠的约会', accept: null, questionUuid: '790b31609ed14357ae63e9c28756f9e6', acceptRate: '60.00' },
+                    { questionNo: 'PEEK61', questionTitle: '【模板】静态区间最值', accept: null, questionUuid: '831a314449d44ea0b1db90ca626bcd1a', acceptRate: '37.84' },
+                    { questionNo: 'PEEK62', questionTitle: '区间GCD', accept: null, questionUuid: '2d252ad8f06243ddb24176189e6613f4', acceptRate: '78.57' }
+                ] },
+                { index: '8', name: '分块', x: '50%', y: '85%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK63', questionTitle: '【模板】整除分块', accept: null, questionUuid: '6b0b510b32484281bd21abb71ef7ba0b', acceptRate: '46.76' },
+                    { questionNo: 'PEEK64', questionTitle: '区间因数个数之和', accept: null, questionUuid: '1ae57482db684866b918c66dbc36cb97', acceptRate: '78.57' },
+                    { questionNo: 'PEEK65', questionTitle: '下取整乘积求和', accept: null, questionUuid: 'a9a1f6a841854aec92a2de0780d383d6', acceptRate: '73.33' },
+                    { questionNo: 'PEEK66', questionTitle: '余数求和', accept: null, questionUuid: '5d18ffe2c6cd45ac8d8040be19c96f14', acceptRate: '33.33' },
+                    { questionNo: 'PEEK67', questionTitle: '区间增量与单点求值', accept: null, questionUuid: '9eafdd79239b4f138a207fe98ee0399d', acceptRate: '66.67' },
+                    { questionNo: 'PEEK68', questionTitle: '【模板】动态区间和Ⅱ ‖ 区间修改 + 区间查询', accept: null, questionUuid: 'ef7a50cf0377447b9b435b0f95e48e70', acceptRate: '62.50' },
+                    { questionNo: 'PEEK69', questionTitle: '区间根号与区间求和', accept: null, questionUuid: '56547df6934f4048a80ec75838d60c8f', acceptRate: '66.67' },
+                    { questionNo: 'PEEK70', questionTitle: '区间加乘与单点求值', accept: null, questionUuid: '7a1de22fa7a1456f8ba519f21de31c84', acceptRate: '43.75' },
+                    { questionNo: 'PEEK71', questionTitle: '区间增量与区间小于计数', accept: null, questionUuid: '74481dd14e3b4875a190952f86e6ffab', acceptRate: '00.00' },
+                    { questionNo: 'PEEK72', questionTitle: '区间增量与区间前驱', accept: null, questionUuid: '11b11d5339f14d72afc732634a6ae80f', acceptRate: '66.67' }
+                ] },
+                { index: '9', name: '树状数组与线段树', x: '30%', y: '80%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK73', questionTitle: '【模板】动态区间和Ⅰ ‖ 单点修改 + 区间查询', accept: null, questionUuid: '3d5796cd11d44b77bfb59e550beba3ee', acceptRate: '61.29' },
+                    { questionNo: 'PEEK74', questionTitle: '区间增量与单点求值', accept: null, questionUuid: 'addd700d4f4647a3b32ccaf42f5147fb', acceptRate: '14.29' },
+                    { questionNo: 'PEEK75', questionTitle: '区间取反与单点求值', accept: null, questionUuid: 'e8856a8250014d168759e29281cb32bf', acceptRate: '66.67' },
+                    { questionNo: 'PEEK76', questionTitle: '单点修改与区间非平凡异或和', accept: null, questionUuid: '6f8261c7e1044c90a1ec1ac2a819dcfe', acceptRate: '71.43' },
+                    { questionNo: 'PEEK77', questionTitle: '区间取反与区间数一', accept: null, questionUuid: '55d474a878a84f4b84dca4b177a8c45c', acceptRate: '72.22' },
+                    { questionNo: 'PEEK78', questionTitle: '动态序列', accept: null, questionUuid: '7d0b439096d049dab23c428cc0bb9c92', acceptRate: '18.18' }
+                ] },
+                { index: '10', name: '数论登峰', x: '15%', y: '65%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK79', questionTitle: '【模板】欧拉函数Ⅰ ‖ 单个整数', accept: null, questionUuid: '6a22f91ad3904c6cbd624ae5ff6a4eac', acceptRate: '92.31' },
+                    { questionNo: 'PEEK80', questionTitle: '【模板】非质模数下的乘法逆元', accept: null, questionUuid: '52328883c41f475c8eb228726af2ce2f', acceptRate: '37.50' },
+                    { questionNo: 'PEEK81', questionTitle: '【模板】欧拉降幂', accept: null, questionUuid: 'da7a14c1a58b48bd80e63771b82e50c5', acceptRate: '04.17' },
+                    { questionNo: 'PEEK82', questionTitle: '[SDOI2008]仪仗队', accept: null, questionUuid: '41e95a615ff8414aa39e3993acfeddfc', acceptRate: '100.00' },
+                    { questionNo: 'PEEK83', questionTitle: '抢红包', accept: null, questionUuid: '63f4ee67d8534e68bc4461f75838291b', acceptRate: '83.33' },
+                    { questionNo: 'PEEK84', questionTitle: '随机路径长度期望', accept: null, questionUuid: '2d64800a124b4f5385e32a6300a3f55a', acceptRate: '100.00' },
+                    { questionNo: 'PEEK85', questionTitle: '单选错位', accept: null, questionUuid: '0a8b5b11b3b8442da62cf68eada06d57', acceptRate: '100.00' },
+                    { questionNo: 'PEEK86', questionTitle: '超多面骰子', accept: null, questionUuid: '21f30447f9844d1fa3805c224074e3e5', acceptRate: '100.00' },
+                    { questionNo: 'PEEK87', questionTitle: '旺仔哥哥走魔法迷宫', accept: null, questionUuid: '710532d8e51f40438917c236054fe990', acceptRate: '37.50' },
+                    { questionNo: 'PEEK88', questionTitle: '绿豆蛙的归宿', accept: null, questionUuid: '764c0b1b34d24122bd9ae75220e370a3', acceptRate: '100.00' },
+                    { questionNo: 'PEEK89', questionTitle: 'Cow Line', accept: null, questionUuid: '15d024fccb7348bf872f5c1af899e825', acceptRate: '80.00' },
+                    { questionNo: 'PEEK90', questionTitle: '紫', accept: null, questionUuid: 'da67ea3672e8405e9d8f85f0eb22e30a', acceptRate: '00.00' }
+                ] },
+                { index: '11', name: '最短路与生成树算法', x: '12%', y: '50%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK91', questionTitle: '【模板】单源最短路Ⅰ ‖ 无权图', accept: true, questionUuid: '359e14832ce1476fadc70dd4bc36b991', acceptRate: '48.12' },
+                    { questionNo: 'PEEK92', questionTitle: '【模板】单源最短路Ⅲ ‖ 非负权图', accept: true, questionUuid: 'd7fafd4f3340439e90597532850257b5', acceptRate: '38.68' },
+                    { questionNo: 'PEEK93', questionTitle: '【模板】最小生成树', accept: true, questionUuid: '6434142fe980434899c396a6124b0778', acceptRate: '61.66' },
+                    { questionNo: 'PEEK94', questionTitle: '小红修道路', accept: null, questionUuid: 'ddecbbd7f9f24511a96876ac0552d882', acceptRate: '58.33' },
+                    { questionNo: 'PEEK95', questionTitle: '小红送外卖', accept: true, questionUuid: '2850d7c941f6494e82ba74bc899eb512', acceptRate: '21.06' },
+                    { questionNo: 'PEEK96', questionTitle: '游游出游', accept: true, questionUuid: 'e787b99f04c1498aa32b9430a4616d8a', acceptRate: '35.68' },
+                    { questionNo: 'PEEK97', questionTitle: '最优乘车', accept: null, questionUuid: '83101a4f624042b59a629089e83b6dd1', acceptRate: '45.90' },
+                    { questionNo: 'PEEK98', questionTitle: '新年好', accept: null, questionUuid: '480ac1962143438287e03d76b0100e6a', acceptRate: '100.00' },
+                    { questionNo: 'PEEK99', questionTitle: 'Telephone Lines', accept: null, questionUuid: '946c91992db8408cb13855c1ff99250e', acceptRate: '100.00' },
+                    { questionNo: 'PEEK100', questionTitle: '邮递员送信', accept: null, questionUuid: '2b0c636cf77d441fa96d40ac64290d39', acceptRate: '74.07' },
+                    { questionNo: 'PEEK101', questionTitle: '最高分不下降路径', accept: null, questionUuid: 'e59aea60a3364a38ac6fd96bfa3e3536', acceptRate: '37.50' },
+                    { questionNo: 'PEEK102', questionTitle: '最小生成树的最长边', accept: null, questionUuid: '73638aa04cc74a1db2ff5ed4d19fb24d', acceptRate: '100.00' }
+                ] },
+                { index: '12', name: '图论进阶', x: '15%', y: '35%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK103', questionTitle: '【模板】拓扑排序', accept: null, questionUuid: '04890358edb44997a4a942ece0f6c867', acceptRate: '57.89' },
+                    { questionNo: 'PEEK104', questionTitle: '二分图判定', accept: null, questionUuid: 'f4b8d0481c7b4278b9b406b636e3c7db', acceptRate: '39.58' },
+                    { questionNo: 'PEEK105', questionTitle: '激活码分发', accept: null, questionUuid: 'a262d035f8a942ce977f2be7d4839bc3', acceptRate: '15.38' },
+                    { questionNo: 'PEEK106', questionTitle: '同义词替换', accept: null, questionUuid: '54e68863da31491aada572180f2bc0b8', acceptRate: '57.14' },
+                    { questionNo: 'PEEK107', questionTitle: '任务分配', accept: null, questionUuid: 'c1c07c2b03834c51a1bc6e42d94b27f2', acceptRate: '100.00' },
+                    { questionNo: 'PEEK108', questionTitle: '水晶铭刻之旅', accept: null, questionUuid: 'd53b2057ae8a4eaf8155447f6b709361', acceptRate: '100.00' },
+                    { questionNo: 'PEEK109', questionTitle: '核心信任者', accept: null, questionUuid: '6283453737754229a17ccb19b406afb5', acceptRate: '71.43' },
+                    { questionNo: 'PEEK110', questionTitle: '魔法迷宫探宝', accept: null, questionUuid: '437fce4da08d40a2aa93c2d0246ecdd3', acceptRate: '100.00' },
+                    { questionNo: 'PEEK111', questionTitle: '星际数据下载', accept: null, questionUuid: 'ba73f9eb91bc4c1e850e40e2ff1d11a4', acceptRate: '100.00' },
+                    { questionNo: 'PEEK112', questionTitle: '物流网络优化', accept: null, questionUuid: '42d1d998501445d399b4b6d07cd5720e', acceptRate: '100.00' },
+                    { questionNo: 'PEEK113', questionTitle: '迷宫可达任务', accept: null, questionUuid: '99d7392ee8f3446c8a6b2f2fb35231cf', acceptRate: '50.00' },
+                    { questionNo: 'PEEK114', questionTitle: '招聘会最大收益匹配', accept: null, questionUuid: '0babc2a5e6c743b3a977ecf15ea0c846', acceptRate: '00.00' }
+                ] },
+                { index: '13', name: '贪心进阶', x: '30%', y: '20%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK115', questionTitle: '[JSOI2007]建筑抢修', accept: null, questionUuid: 'e69a484a4dfb4015b34c2e0ff2ae2ac8', acceptRate: '40.35' },
+                    { questionNo: 'PEEK116', questionTitle: 'tokitsukaze and Soldier', accept: null, questionUuid: 'bc014143551e4db492658aec74261ea1', acceptRate: '100.00' },
+                    { questionNo: 'PEEK117', questionTitle: 'Work Scheduling', accept: null, questionUuid: 'b4392a5b577546918e8f493bc19e9534', acceptRate: '17.39' },
+                    { questionNo: 'PEEK118', questionTitle: '低买高卖', accept: null, questionUuid: '61ad3cbe0e7d4db9b64fc2b7b503dfd8', acceptRate: '48.47' },
+                    { questionNo: 'PEEK119', questionTitle: '种树', accept: null, questionUuid: 'bb106df8876e4fd39b858a13ef0caf52', acceptRate: '80.00' },
+                    { questionNo: 'PEEK120', questionTitle: '奥赛组队', accept: null, questionUuid: '8809c78fe4fa445ab8218cee5b69910f', acceptRate: '14.35' },
+                    { questionNo: 'PEEK121', questionTitle: '汉堡猪猪分糖果', accept: null, questionUuid: 'a8a665d6324a40918f47242a61551018', acceptRate: '09.09' },
+                    { questionNo: 'PEEK122', questionTitle: '灵梦的字符串问题', accept: null, questionUuid: '787c1de8325147309918aeaf5e72e634', acceptRate: '00.00' },
+                    { questionNo: 'PEEK123', questionTitle: '[P1080] 国王游戏(简化版)', accept: null, questionUuid: '145c3426577f40f8b2b5e51ca6f61523', acceptRate: '63.79' },
+                    { questionNo: 'PEEK124', questionTitle: '货物堆放', accept: null, questionUuid: '22541f98215747aeb0b8217ae1dd97e8', acceptRate: '49.00' },
+                    { questionNo: 'PEEK125', questionTitle: '皇后游戏', accept: null, questionUuid: '66e5449deeae46ea93e8c3fef43bdd08', acceptRate: '100.00' },
+                    { questionNo: 'PEEK126', questionTitle: 'Protecting the Flowers', accept: null, questionUuid: 'c39ad5e0563748d4be203fb243285eeb', acceptRate: '83.33' }
+                ] },
+                { index: '14', name: '字符串匹配算法', x: '45%', y: '60%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK127', questionTitle: '动物园', accept: null, questionUuid: '162094f5321e450baec41f87f8a7e22b', acceptRate: '00.00' },
+                    { questionNo: 'PEEK128', questionTitle: '【模板】前缀函数（kmp）', accept: null, questionUuid: 'f347bf9d731d47a0bc87bc7e2415cef1', acceptRate: '72.09' },
+                    { questionNo: 'PEEK129', questionTitle: '子串匹配', accept: null, questionUuid: '70a543d8a9a445c1a2543bbdfc9f2dde', acceptRate: '100.00' },
+                    { questionNo: 'PEEK130', questionTitle: '字符串拓印', accept: null, questionUuid: '05ac5abba2f14f8b8c9c07313039841b', acceptRate: '00.00' },
+                    { questionNo: 'PEEK131', questionTitle: '前缀最大周期长度之和', accept: null, questionUuid: '1846fd957d8847ebbd17774cd7c5f357', acceptRate: '80.00' },
+                    { questionNo: 'PEEK132', questionTitle: '【模板】失配树', accept: null, questionUuid: 'e1240fa382a74fb489a53aa748b59e3c', acceptRate: '62.50' },
+                    { questionNo: 'PEEK133', questionTitle: '阅读理解', accept: null, questionUuid: '199904c4134b48ffbc48032a5373fb7c', acceptRate: '85.71' },
+                    { questionNo: 'PEEK134', questionTitle: '【模板】Trie 字典树', accept: null, questionUuid: 'feed1cd7546a4901965751b9fbf5f8a1', acceptRate: '48.28' },
+                    { questionNo: 'PEEK135', questionTitle: '【模板】马拉车算法', accept: null, questionUuid: 'c01a7b5e88e544db841a009a035bd125', acceptRate: '23.60' },
+                    { questionNo: 'PEEK136', questionTitle: '双倍回文', accept: null, questionUuid: 'bc807d8037244ab58bf57181fb57b738', acceptRate: '00.00' },
+                    { questionNo: 'PEEK137', questionTitle: '不是烤串故事', accept: null, questionUuid: 'd63eb724bcde43639dc676abf2f9fd81', acceptRate: '75.00' },
+                    { questionNo: 'PEEK138', questionTitle: '神秘串', accept: null, questionUuid: '066898742430445a8166d1280a33cee9', acceptRate: '100.00' },
+                    { questionNo: 'PEEK139', questionTitle: '回文', accept: null, questionUuid: 'a610534d4d79403aac6409567f17380c', acceptRate: '100.00' },
+                    { questionNo: 'PEEK140', questionTitle: '萌芽', accept: null, questionUuid: 'aa8beffb104a4d4fb4e2594a0b20dbb6', acceptRate: '75.00' }
+                ] },
+                { index: '15', name: '动态规划登峰', x: '55%', y: '60%', type: 'ethereal', taQuestionList: [
+                    { questionNo: 'PEEK141', questionTitle: '[SCOI2005]互不侵犯KING', accept: null, questionUuid: '3c4b5aceaa5c4d54bbd058e7f76a2084', acceptRate: '73.33' },
+                    { questionNo: 'PEEK142', questionTitle: '炮兵阵地', accept: null, questionUuid: '31a33330bc1e4b5ea91c08bc1c18aaf5', acceptRate: '54.55' },
+                    { questionNo: 'PEEK143', questionTitle: '郊区春游', accept: null, questionUuid: '7dd330d6ab3b46af9ca604979b8bd83b', acceptRate: '30.00' },
+                    { questionNo: 'PEEK144', questionTitle: '简单环', accept: null, questionUuid: '1d040ecc74bb43c190e94792e6c6767c', acceptRate: '66.67' },
+                    { questionNo: 'PEEK145', questionTitle: 'Most Powerful', accept: null, questionUuid: '9796395a28494748b08840170af39216', acceptRate: '87.50' },
+                    { questionNo: 'PEEK146', questionTitle: 'mixup2 混乱的奶牛', accept: null, questionUuid: 'fc90c12a3c224f98aa04190b25a9f7cf', acceptRate: '40.00' },
+                    { questionNo: 'PEEK147', questionTitle: '蒙德的梦', accept: null, questionUuid: '80833844a7d04f8ca8c529e4e4bf99b5', acceptRate: '70.00' },
+                    { questionNo: 'PEEK148', questionTitle: '【模板】矩阵快速幂', accept: null, questionUuid: '9aa4e720ca7c47f4a0abf1e13918ab0c', acceptRate: '28.00' },
+                    { questionNo: 'PEEK149', questionTitle: '斐波那契数列', accept: null, questionUuid: '793271e354cd4508b51c00b244c770d7', acceptRate: '60.71' },
+                    { questionNo: 'PEEK150', questionTitle: '波斐契那数列', accept: null, questionUuid: 'c949564b181f42348e4d08d0a9fbc092', acceptRate: '86.36' },
+                    { questionNo: 'PEEK151', questionTitle: '斐波那契公约数', accept: null, questionUuid: '3ea71644520a443ab1a2d0746a8b3cb9', acceptRate: '55.56' },
+                    { questionNo: 'PEEK152', questionTitle: '经典 DP', accept: null, questionUuid: '183d0677bb65427584b3a73f20cae820', acceptRate: '83.33' },
+                    { questionNo: 'PEEK153', questionTitle: '渝', accept: null, questionUuid: '6b3f9bdbcaba46aba341b41a76e9f889', acceptRate: '80.00' },
+                    { questionNo: 'PEEK154', questionTitle: '小红的二分图构造', accept: null, questionUuid: '3ea0887a796b479ea9f336a8a97a405d', acceptRate: '37.16' }
+                ] }
+            ]
         }
     ]
 }; 

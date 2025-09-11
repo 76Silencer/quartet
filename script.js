@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 帮助函数：检查章节是否已完成
     function isChapterCompleted(chapter) {
-        return chapter.problems && chapter.problems.every(p => p.accept);
+        return chapter.taQuestionList && chapter.taQuestionList.every(p => p.accept);
     }
     
     // -- 切换回主星系视图 --
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 planetEl.classList.add('completed');
             }
 
-            // 修正：从ID中提取数字部分作为序号
-            const chapterNumber = chapter.id.split('-').pop(); 
+            // 修正：使用新的 `index` 字段
+            const chapterNumber = chapter.index; 
             planetEl.innerHTML = `
                 <div class="planet-number">${String(chapterNumber).padStart(2, '0')}</div>
                 <div class="planet-name">${chapter.name}</div>
@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 附加数据以便后续使用
             planetEl.dataset.regionId = regionId;
-            planetEl.dataset.chapterId = chapter.id;
+            planetEl.dataset.chapterId = chapter.index; // 修正：使用新的 `index` 字段
 
             // 点击行星进入太阳系视图
             planetEl.addEventListener('click', () => {
-                renderSolarSystemView(regionId, chapter.id);
+                renderSolarSystemView(regionId, chapter.index); // 修正：使用新的 `index` 字段
             });
 
             dynamicContent.appendChild(planetEl);
@@ -145,7 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const regionData = galaxyData.regions.find(r => r.id === regionId);
         if (!regionData) return; // 安全检查
 
-        const chapter = regionData.chapters.find(c => c.id === chapterId);
+        // 关键修复：现在使用 `index` 字段进行比较
+        const chapter = regionData.chapters.find(c => c.index === chapterId);
         if (!chapter) return; // 安全检查
         
         header.classList.add('hidden'); // 关键：在太阳系视图隐藏Header
@@ -165,8 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // 创建太阳 (恒星)
         const sunEl = document.createElement('div');
         sunEl.className = 'sun';
-        // 修正：使用 chapter.id 来确保序号正确
-        const sunChapterNumber = chapter.id.split('-').pop();
+        // 修正：使用新的 `index` 字段
+        const sunChapterNumber = chapter.index;
         const chapterNumberHTML = `<div class="sun-chapter-number">${String(sunChapterNumber).padStart(2, '0')}</div>`;
         const chapterNameHTML = `<div class="sun-name">${chapter.name}</div>`;
         sunEl.innerHTML = chapterNumberHTML + chapterNameHTML;
@@ -178,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dynamicContent.appendChild(planetsContainer);
 
         // 创建行星 (题目)
-        chapter.problems.forEach((problem, index) => {
+        chapter.taQuestionList.forEach((problem, index) => {
             const planetWrapper = document.createElement('div');
             planetWrapper.className = 'problem-planet-wrapper';
             // 当点击行星时，跳转到对应的题目页面
@@ -280,9 +281,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (isChapterCompleted(chapter)) { // 使用辅助函数
                         completedChapters++;
                     }
-                    if (chapter.problems) { // 安全检查
-                        totalProblems += chapter.problems.length;
-                        solvedProblems += chapter.problems.filter(p => p.accept).length;
+                    if (chapter.taQuestionList) { // 安全检查
+                        totalProblems += chapter.taQuestionList.length;
+                        solvedProblems += chapter.taQuestionList.filter(p => p.accept).length;
                     }
                 });
             }

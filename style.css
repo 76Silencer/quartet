@@ -510,6 +510,22 @@ footer {
 .planet.terran { background: radial-gradient(circle at 30% 30%, #aed581, #689f38); }
 .planet.ocean  { background: radial-gradient(circle at 30% 30%, #4fc3f7, #0288d1); }
 .planet.lava   { background: radial-gradient(circle at 30% 30%, #ff8a65, #f4511e); }
+.planet.ethereal {
+    background-color: #4a00e0; /* 深邃的紫色 */
+    box-shadow: 0 0 15px 5px #8e2de2, 0 0 25px 10px rgba(74, 0, 224, 0.5), inset 0 0 10px 2px #fff;
+    border: 2px solid #8e2de2; /* 靛蓝色边框 */
+}
+
+.planet.ethereal .planet-name {
+    color: #f8f8f8;
+    text-shadow: 0 0 5px #fff, 0 0 10px #8e2de2; /* 银白色/紫色光晕 */
+}
+
+.planet.ethereal.completed {
+    background-color: #ffd700; /* 完成后变为金色 */
+    box-shadow: 0 0 20px 10px #ffd700, 0 0 35px 15px rgba(255, 215, 0, 0.6), inset 0 0 12px 3px #fff;
+    border-color: #fff;
+}
 
 /* 新增：行星序号样式 */
 .planet-number {
